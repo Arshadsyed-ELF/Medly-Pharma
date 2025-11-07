@@ -12,7 +12,7 @@ jobs:
     - name: Deploy to WSL
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: <YOUR_WSL_IP>
+        host:  172.22.217.196
         username: deploy
         key: ${{ secrets.SSH_KEY }}
         script: |
