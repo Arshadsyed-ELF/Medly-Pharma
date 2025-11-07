@@ -23,7 +23,7 @@ import Users from './Admin/Users';
 
 function App() {
   return (
-    <div >
+    <div style={{backgroundColor:"red"}}>
      <BrowserRouter>
      <Routes>
       {/* <Route path='/' element={<Home/>} /> */}
