@@ -1,4 +1,5 @@
 const express = require('express');
+require("dotenv").config();
 const cors = require('cors');
 const multer = require('multer'); // Import multer
 require('./db/config');
@@ -15,6 +16,8 @@ app.use(cors({
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true
 }));
+
+const port = process.env.PORT 
 
 // Set up Multer for file upload
 const storage = multer.diskStorage({
@@ -261,8 +264,8 @@ app.post('/add', async (req, res) => {
       res.status(500).json({ error: 'Error fetching wishlist' });
     }
   });
+ 
 
-
-app.listen(8000, () => {  
-    console.log("listening at 8000");
+app.listen(port, () => {     
+    console.log(`listening at ${port}`);
 });  
