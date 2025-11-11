@@ -12,7 +12,7 @@ const myorders=require('./db/User/myorders')
 const app = express();      
 app.use(express.json());
 app.use(cors({
-    origin: ["https://medly-pharma.onrender.com"],
+    origin: ["http://localhost:3000"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true
 }));
