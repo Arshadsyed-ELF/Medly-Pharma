@@ -15,7 +15,7 @@ const Ulogin =()=> {
   const handleSubmit = (e) => {
     e.preventDefault();
     let payload = { email, password }
-    axios.post("http://localhost:8000/ulogin", payload)
+    axios.post(`${process.env.REACT_APP_API_URL}/ulogin`, payload)
       .then(res => {
         console.log("login: " + res.data.Status);
         if (res.data.Status === "Success") {
